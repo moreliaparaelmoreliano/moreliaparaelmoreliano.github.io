@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Galeria</title>
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+</head>
+<body>
+  
+<div class="main">
+		<div class="slides">
+      <div>
+<h3 font-family:verdana ; align="center" >Catedral de día</h3>
+			<img src="imagenes/cat.jpg" alt="">
+
+      </div>
+      <div>
+      <span><h3 align="center">Catedral de noche</h3></span>
+			<img a href src="imagenes/catedral.jpg" alt="">
+      </div>
+       <div>
+        <h3 font-family:verdana align="center">Acueducto</h3>
+			<img src="imagenes/acueducto.jpg" alt="">
+      </div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.slides.js"></script>
+	<script>
+
+$(function(){
+  $(".slides").slidesjs({
+    play: {
+      active: true,
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+      effect: "slide",
+        // [string] Can be either "slide" or "fade".
+      interval: 4000,
+        // [number] Time spent on each slide in milliseconds.
+      auto: true,
+        // [boolean] Start playing the slideshow on load.
+      swap: true,
+        // [boolean] show/hide stop and play buttons
+      pauseOnHover: false,
+        // [boolean] pause a playing slideshow on hover
+      restartDelay: 2500
+        // [number] restart delay on inactive slideshow
+    }
+  });
+});
+	</script>
+</body>
+</html>

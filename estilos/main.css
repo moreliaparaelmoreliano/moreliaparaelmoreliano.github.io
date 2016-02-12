@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	font-family: candara;
+	color:red;
 }
 
 #cabecera{
@@ -15,6 +16,38 @@
 	margin: 0 auto;
 	background: #000000;
 	overflow: hidden;
+}
+#contenido {
+	padding: 5%;
+
+}
+#contenido1{
+	display: flex;
+	justify-content:space-between;
+	flex-wrap: wrap;
+}
+
+#contenido1 > div{
+	width: 30%;
+	padding-right: 15px;
+	box-sizing:border-box;
+}
+#contenido1 > div > img{
+
+	width: 100%;
+	height: 250px;
+}
+/* --------------------------------------------*/
+#contenido2{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* ------------------------------------------ */
+.imagenFull{
+	width: 100%;
+	border: solid 2px black;
 }
 #uno{
 	float: left;
@@ -40,6 +73,14 @@
 #menuList{	
 	background:#48280b:
 	padding: 0;
+}
+
+#image{
+background-color:orange;
+width:90%;
+text-align: center;
+padding: 5px 10px 5px 10px;
+margin:auto;
 }
 
 #menuList > li{
