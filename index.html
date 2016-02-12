@@ -3,9 +3,66 @@
 		<meta charset="UTF-8">
 		<title>Morelia para el moreliano</title>
 		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="social.css">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	</head>
 	<body bgcolor=white>
+     <script>
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    if (response.status === 'connected') {
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    } else {
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into Facebook.';
+    }
+  }
+
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1680068785582017',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.2' // use version 2.2
+  });
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+</script>
+
+
+
 		
 		<div id="contenedor">
 			<div id="cabecera"> 
@@ -28,7 +85,7 @@
 							</ul>
 						</li>
 					    <li>
-						   <a href="galeria.html">Galeria</a>
+						   <a href="galeria2.html">Galeria</a>
 					    </li>
 					    <li>
 						   <a href="#">Contacto</a>
@@ -54,65 +111,92 @@
                     
 					<div id="contenido1">
 			<div>
-				<img src="imagenes/calzada.jpg" alt="">
-				<span>CONCIERTO DE CÁMARA EL CCU</span>
+				<img src="imagenes/biblioteca.jpg" alt="">
+				<span>Biblioteca Pública</span>
+			</div>
+			<div>
+				<img src="imagenes/acueducto3.jpg" alt="">
+				<span>Acueducto de Morelia</span>
+			</div>
+			<div>
+				<img src="imagenes/callejon.jpg" alt="">
+				<span>Callejon del romance</span>
+			</div>
+
+			<div>
+				<img src="imagenes/tarascas.jpg" alt="">
+				<span>Tarascas de Morelia</span>
+			</div>
+
+
+			<div>
+				<img src="imagenes/colegio.jpg" alt="">
+				<span>Colegio de San Nicolas</span>
 			</div>
 			<div>
 				<img src="imagenes/calzada.jpg" alt="">
-				<span>CONCIERTO DE CÁMARA EL POLIFORUM</span>
+				<span>Calzada</span>
 			</div>
-			<div>
-				<img src="imagenes/calzada.jpg" alt="">
-				<span>CONCIERTO DE ORQUESTA SINFONICA</span>
-			</div>
+			<br>
+				    <!--COMPARTIR -->	
+					 	<div class="fb-share-button" data-href="https://youtu.be/YykjpeuMNEk" data-layout="button_count"> 
+                        </div>
+				    <!--TWITTEAR -->
+				    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://youtu.be/YykjpeuMNEk" data-hashtags="MoreliaParaElMoreliano">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-			<div>
-				<img src="imagenes/calzadajpg" alt="">
-				<span>CONCIERTO DE CÁMARA EN EL IJUM</span>
-			</div>
-
-
-			<div>
-				<img src="imagenes/calzada.jpg" alt="">
-				<span>CONCIERTO DE CÁMARA EN EL CONSERVATORIO</span>
-			</div>
-
-		</div>
-
-					
-
-		                
-                        
-                         
-
-						</p><h1><font size=16, color="purple">Cartelera de eventos del mes de Febrero</font></h1>
-					</br>
-					<div id="contenedorImagenes">
-		                <img src="imagenes/66.jpg" alt="" class="imagenFull">
-                         <img src="imagenes/1.jpg" alt="" class="imagenFull">
-                        <img src="imagenes/callejon.jpg" alt="" class="imagenFull">
-
-		                </div>
-                        
-					<div id="image">
-                    
-                    <h3><a href="Fiesta.html">-K’uinchekua “Fiesta Michoacana” 2016</p>
-                    14 de febrero</p></h3>
-                    
-                    <h3><a href="concierto.html">-Concierto con el Trío Ioni</p>
-                    25 de febrero</p>
-                    Casa de la Cultura de Morelia</p></h3>
-                    
-                    <h3><a href="musgos.html">-Concierto “Musgos” con Tito Rivas y Morris Trujillo</p>
-                    19 de febrero</p>
-                    Centro Mexicano para la Música y las Artes Sonoras (CMMAS)</p></h3>
-                    </div>
-						
 					</div>
 				</div>
 				
 			</div>	
 					</div>
+
+			
+
+		</div
+		<h1><font size=16, color="purple" >Cartelera del mes de Febrero</font></h1>
+                    
+					<div id="contenido1">
+			<div>
+				<img src="imagenes/66.jpg" alt="">
+				<span><a href="Fiesta.html">-K’uinchekua “Fiesta Michoacana” 2016</p>
+                    14 de febrero</p></span>
+			</div>
+			<div>
+				<img src="imagenes/1.jpg" alt="">
+				<span><a href="concierto.html">-Concierto con el Trío Ioni</p>
+                25 de febrero</p>
+                Casa de la Cultura de Morelia</p></span>
+			</div>
+			<div>
+				<img src="imagenes/concierto.jpg" alt="">
+				<span><a href="musgos.html">-Concierto “Musgos” con Tito Rivas y Morris Trujillo</p>
+                    19 de febrero</p>
+                    Centro Mexicano para la Música y las Artes Sonoras (CMMAS)</p></span>
+			</div>
+
+		</div>
+					         
+					
+				</div>
+				
+			</div>	
+					</div>
+
+
+					<div class="social">
+						<ul> <!--LIKE -->
+							<div class="fb-like" data-href="https://www.facebook.com/MoreliaParaElMoreliano/" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true" data-font="tahoma"></div>
+						</ul>
+						<br>
+						<ul>
+							<span class="seguir">  <!--SEGUIR -->
+							 <a href="https://twitter.com/More_Moreliano" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Seguir @More_Moreliano</a>
+			               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+			               </script>
+							</span>
+						</ul>
+              </div>
 
        <div id="footer">
 		Todos los derechos reservados The CrackS<sup>©</sup> 2016.

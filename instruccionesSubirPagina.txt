@@ -7,12 +7,13 @@
 	>cd tucuenta.github.io
 4.- copia todos los archivos a esta carpeta
 5.- subirlos con:
-	>git add --all
-	>git commit -m "subir"
-	>git push origin master
+	git add --all
+	git commit -m "subir"
+	git push origin master
 
 
 
 tu pagina deberia estar en:
 
 http://tucuenta.github.io
+
