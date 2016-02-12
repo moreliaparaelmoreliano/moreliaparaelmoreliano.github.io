@@ -1,0 +1,18 @@
+0.- instalar git
+1.- crear una cuenta en github.com
+2.- crear un repositorio con el siguiente nombre: 
+	tucuenta.github.io
+3.-copiar el repo a tu computadora con lo siguiente:
+	>git clone https://github.com/tucuenta/tucuenta.github.io.git
+	>cd tucuenta.github.io
+4.- copia todos los archivos a esta carpeta
+5.- subirlos con:
+	>git add --all
+	>git commit -m "subir"
+	>git push origin master
+
+
+
+tu pagina deberia estar en:
+
+http://tucuenta.github.io

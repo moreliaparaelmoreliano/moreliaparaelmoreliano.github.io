@@ -1,0 +1,159 @@
+*{
+	margin: 0;
+	font-family: candara;
+}
+
+#cabecera{
+	background: url(catedral.jpg) center/cover;
+	height: 90%;
+	color: white;
+}
+
+#contenedor{
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	background: #000000;
+	overflow: hidden;
+}
+#uno{
+	float: left;
+	width: 50%;
+	padding: 5%;
+	box-sizing: border-box;
+	padding-top: 5%;
+}
+
+#dos{
+	float: right;
+	width: 70%;
+	
+	text-align: right;
+}
+
+#dos > img{
+	width: 40%;
+	padding-right: 10%;
+}
+
+
+#menuList{	
+	background:#48280b:
+	padding: 0;
+}
+
+#menuList > li{
+	list-style: none;
+	display: inline-block;
+	font-size: 100%;
+	padding: 15px;
+	width: 23%;
+	box-sizing: border-box;
+	transition: all .5s;
+}
+
+#menuList > li > a{
+	display: block;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	font-size: 16;
+}
+
+#menuList > li:hover{
+	background: #000000;
+}
+
+----------------------------------------------------------------
+
+
+#menuList > li {
+				float:center;
+			}
+			
+			
+			#menuList li a {
+				background-color:#1B0A5F;
+				color: white;
+				text-decoration:none;
+				padding:7% 10%;
+				display:block;
+				font-size: 16px;
+			}
+			
+			#menuList li a:hover {
+				background-color:#4499CC;
+			}
+			
+			#menuList li ul {
+				display:none;
+				position:absolute;
+				min-width:10%;
+			}
+			
+			#menuList li:hover > ul {
+				display:block;
+			}
+			
+			#menuList li ul li {
+				position:relative;
+			}
+			
+			#menuList li ul li ul {
+				right:-40%;
+				top:0px;
+			}
+
+#contenido {
+	padding: 5%;
+
+}
+#cuatro > img{
+	width: 80%;
+
+}
+#cinco{
+	width: 60%;
+	float: center;
+}
+#cuatro{
+	width: 70%;
+	float: left;
+}
+---------------------------------------------------------------------------------------
+
+#menuList > li {
+				float:left;
+			}
+			
+			
+			#menuList li a {
+				background-color:gray;
+				color: white;
+				text-decoration:none;
+				padding:7% 15%;
+				display:block;
+			}
+			
+			#menuList li a:hover {
+				background-color:	#CCCCCC;
+			}
+			
+			#menuList li ul {
+				display:none;
+				position:absolute;
+				min-width:15%;
+			}
+			
+			#menuList li:hover > ul {
+				display:block;
+			}
+			
+			#menuList li ul li {
+				position:relative;
+			}
+			
+			#menuList li ul li ul {
+				right:-50%;
+				top:0px;
+			}
